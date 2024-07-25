@@ -4,6 +4,17 @@
   color: black;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.credit-card-container {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   justify-content: space-around;
