@@ -1,7 +1,7 @@
 import "./MoneyManagement.scss";
 import { RiUserReceived2Line } from "react-icons/ri";
 import { RiUserShared2Line } from "react-icons/ri";
-import { SendMoneyModal } from "../../modals";
+import { ReceiveMoneyModal, SendMoneyModal } from "../../modals";
 import { useState } from "react";
 
 export const MoneyManagement = () => {
@@ -9,6 +9,7 @@ export const MoneyManagement = () => {
    * 1. State is used when I want to open the modal.
    */
   const [isSendModalOpen, setIsSendModalOpen] = useState(false);
+  const [isReceiveModalOpen, seIsReceiveModalOpen] = useState(false);
 
   /**
    * 1. This where the function to set the state to open
@@ -17,17 +18,21 @@ export const MoneyManagement = () => {
     setIsSendModalOpen(true);
   };
 
+  const onClickReceiveModalOpen = () => {
+    seIsReceiveModalOpen(true);
+  };
+
   return (
     <div className="mm-container">
       <div className="send-money" onClick={onClickSendModalOpen}>
         <div className="send-icon">
-          <RiUserShared2Line />
+          <RiUserShared2Line color="red" size={20} />
           <div className="send">Send Money</div>
         </div>
       </div>
-      <div className="receive-money">
+      <div className="receive-money" onClick={onClickReceiveModalOpen}>
         <div className="receive-icon">
-          <RiUserReceived2Line />
+          <RiUserReceived2Line color="green" size={20} />
           <div className="receive">Receive Money</div>
         </div>
       </div>
@@ -35,6 +40,7 @@ export const MoneyManagement = () => {
        * 1. The modal is used here because the component to trigger it is here.
        */}
       <SendMoneyModal isOpen={isSendModalOpen} />
+      <ReceiveMoneyModal isReceiveOpen={isReceiveModalOpen} />
     </div>
   );
 };

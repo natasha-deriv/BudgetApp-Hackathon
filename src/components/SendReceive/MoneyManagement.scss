@@ -4,10 +4,15 @@
 }
 
 .send-money {
-  background-color: rgb(250, 175, 175);
+  background-color: rgb(255, 220, 220);
   width: fit-content;
   padding: 15px;
   border-radius: 8px;
+}
+
+.send {
+  color: red;
+  font-weight: 500;
 }
 
 .send-icon {
@@ -17,7 +22,7 @@
 }
 
 .receive-money {
-  background-color: rgb(250, 175, 175);
+  background-color: rgb(255, 220, 220);
   width: fit-content;
   padding: 15px;
   border-radius: 8px;
@@ -27,4 +32,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.receive {
+  color: green;
+  font-weight: 500;
 }
