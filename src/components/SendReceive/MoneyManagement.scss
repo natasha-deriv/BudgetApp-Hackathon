@@ -1,0 +1,30 @@
+.mm-container {
+  display: flex;
+  gap: 20px;
+}
+
+.send-money {
+  background-color: rgb(250, 175, 175);
+  width: fit-content;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.send-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.receive-money {
+  background-color: rgb(250, 175, 175);
+  width: fit-content;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.receive-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

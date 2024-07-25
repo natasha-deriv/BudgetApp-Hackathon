@@ -1,5 +1,5 @@
 import "./App.css";
-import { CreditCard } from "./components";
+import { CreditCard, MoneyManagement } from "./components";
 
 const App = () => {
   return (
@@ -10,6 +10,9 @@ const App = () => {
       </div>
       <div className="credit-card-container">
         <CreditCard />
+      </div>
+      <div className="money-management-container">
+        <MoneyManagement />
       </div>
     </div>
   );
