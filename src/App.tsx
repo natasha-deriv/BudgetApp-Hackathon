@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import { CreditCard, MoneyManagement } from "./components";
+import { CreditCard, MoneyManagement, TransactionList } from "./components";
 import { useBalance } from "./hooks";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <div className="money-management-container">
         <MoneyManagement />
       </div>
+      <TransactionList />
     </div>
   );
 };
