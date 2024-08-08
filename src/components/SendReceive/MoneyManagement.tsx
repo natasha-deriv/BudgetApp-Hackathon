@@ -9,7 +9,7 @@ export const MoneyManagement = () => {
    * 1. State is used when I want to open the modal.
    */
   const [isSendModalOpen, setIsSendModalOpen] = useState(false);
-  const [isReceiveModalOpen, seIsReceiveModalOpen] = useState(false);
+  const [isReceiveModalOpen, setIsReceiveModalOpen] = useState(false);
 
   /**
    * 1. This where the function to set the state to open
@@ -18,8 +18,16 @@ export const MoneyManagement = () => {
     setIsSendModalOpen(true);
   };
 
+  const onClickCloseSendModal = () => {
+    setIsSendModalOpen(false);
+  };
+
   const onClickReceiveModalOpen = () => {
-    seIsReceiveModalOpen(true);
+    setIsReceiveModalOpen(true);
+  };
+
+  const onClickCloseReceiveModal = () => {
+    setIsReceiveModalOpen(false);
   };
 
   return (
@@ -39,8 +47,14 @@ export const MoneyManagement = () => {
       {/**
        * 1. The modal is used here because the component to trigger it is here.
        */}
-      <SendMoneyModal isOpen={isSendModalOpen} />
-      <ReceiveMoneyModal isReceiveOpen={isReceiveModalOpen} />
+      <SendMoneyModal
+        isSendOpen={isSendModalOpen}
+        handleClose={onClickCloseSendModal}
+      />
+      <ReceiveMoneyModal
+        isReceiveOpen={isReceiveModalOpen}
+        handleClose={onClickCloseReceiveModal}
+      />
     </div>
   );
 };

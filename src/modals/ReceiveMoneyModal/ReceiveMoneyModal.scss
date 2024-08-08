@@ -1,5 +1,17 @@
 .receive-modal {
-  width: 100px;
+  width: 400px;
   height: auto;
   color: black;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.receive-money-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cancel-icon {
+  cursor: pointer;
 }
