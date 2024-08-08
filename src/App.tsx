@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import { CreditCard, MoneyManagement, TransactionList } from "./components";
 import { useBalance } from "./hooks";
