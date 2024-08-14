@@ -1,5 +1,4 @@
 import { useTransactions } from "../../hooks";
-import "./TransactionList.scss";
 
 type Transactions = {
   id: number;
@@ -12,11 +11,11 @@ export const TransactionList = () => {
   const { transactions } = useTransactions();
 
   return (
-    <div className="transaction-list">
-      <div>TransactionList</div>
-      <div className="transaction-parent">
+    <div className=" bg-white p-3 rounded-lg shadow-[rgba(2,0,15,0.5)_0px_0px_8px_0px]">
+      <div className="text-xl pb-5">TransactionList</div>
+      <div className="flex justify-between gap-3 flex-col">
         {transactions.map((transactions: Transactions) => (
-          <div className="transaction-item" key={transactions.id}>
+          <div className="flex justify-between" key={transactions.id}>
             <div>{transactions.address}</div>
             <div>{transactions.amount}</div>
           </div>

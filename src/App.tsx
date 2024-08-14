@@ -1,23 +1,22 @@
 import "./App.css";
-import { CreditCard, MoneyManagement, TransactionList } from "./components";
-import { useBalance } from "./hooks";
+import { Footer, Header, TransactionList } from "./components";
 
 const App = () => {
-  const { balance } = useBalance();
-
   return (
-    <div className="main-container">
-      <div className="container">
-        <div className="currentBalance">Current Balance</div>
-        <div className="balance">${balance.toFixed(2)}</div>
+    <div>
+      <div>
+        <Header />
       </div>
-      <div className="credit-card-container">
+      {/* <div className="credit-card-container">
         <CreditCard />
-      </div>
-      <div className="money-management-container">
+      </div> */}
+      {/* <div className="money-management-container">
         <MoneyManagement />
+      </div> */}
+      <div className="mt-11 px-4">
+        <TransactionList />
       </div>
-      <TransactionList />
+      <Footer />
     </div>
   );
 };

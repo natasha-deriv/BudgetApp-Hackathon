@@ -1,5 +1,4 @@
 import { Modal } from "@deriv-com/ui";
-import "./ReceiveMoneyModal.scss";
 import { IoClose } from "react-icons/io5";
 /**
  * @todo Add onClose function prop. Type would be Voidfunction
@@ -17,10 +16,14 @@ export const ReceiveMoneyModal = ({
   handleClose,
 }: ReceiveModalProps) => {
   return (
-    <Modal className="receive-modal" isOpen={isReceiveOpen} ariaHideApp={false}>
-      <div className="receive-money-title">
+    <Modal
+      className="w-[400px] h-auto text-black rounded-lg p-2"
+      isOpen={isReceiveOpen}
+      ariaHideApp={false}
+    >
+      <div className="flex justify-between items-center">
         <div>Receive</div>
-        <IoClose className="cancel-icon" size={20} onClick={handleClose} />
+        <IoClose className="cursor-pointer" size={20} onClick={handleClose} />
       </div>
     </Modal>
   );

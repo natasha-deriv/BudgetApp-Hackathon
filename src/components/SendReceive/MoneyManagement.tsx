@@ -1,6 +1,5 @@
-import "./MoneyManagement.scss";
-import { RiUserReceived2Line } from "react-icons/ri";
-import { RiUserShared2Line } from "react-icons/ri";
+import { IoAddCircleOutline } from "react-icons/io5";
+import { LuSend } from "react-icons/lu";
 import { ReceiveMoneyModal, SendMoneyModal } from "../../modals";
 import { useState } from "react";
 
@@ -31,17 +30,23 @@ export const MoneyManagement = () => {
   };
 
   return (
-    <div className="mm-container">
-      <div className="send-money" onClick={onClickSendModalOpen}>
-        <div className="send-icon">
-          <RiUserShared2Line color="red" size={20} />
-          <div className="send">Send Money</div>
+    <div className="flex items-center gap-5 w-full justify-around">
+      <div
+        className="w-fit p-4 rounded-lg border"
+        onClick={onClickSendModalOpen}
+      >
+        <div className="flex items-center gap-2">
+          <LuSend size={20} color="white" />
+          <div className="text-white">Send Money</div>
         </div>
       </div>
-      <div className="receive-money" onClick={onClickReceiveModalOpen}>
-        <div className="receive-icon">
-          <RiUserReceived2Line color="green" size={20} />
-          <div className="receive">Receive Money</div>
+      <div
+        className="w-fit p-4 rounded-lg border"
+        onClick={onClickReceiveModalOpen}
+      >
+        <div className="flex items-center gap-2">
+          <IoAddCircleOutline size={20} color="white" />
+          <div className="text-white">Add Money</div>
         </div>
       </div>
       {/**
