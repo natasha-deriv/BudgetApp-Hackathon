@@ -1,23 +1,16 @@
 import "./App.css";
-import { Footer, Header, TransactionList } from "./components";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home/Home";
+import { Expenses } from "./components/Expenses/Expenses";
+import { Settings } from "./components/Settings/Settings";
 
 const App = () => {
   return (
-    <div>
-      <div>
-        <Header />
-      </div>
-      {/* <div className="credit-card-container">
-        <CreditCard />
-      </div> */}
-      {/* <div className="money-management-container">
-        <MoneyManagement />
-      </div> */}
-      <div className="mt-11 px-4">
-        <TransactionList />
-      </div>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/expenses" element={<Expenses />} />
+      <Route path="/settings" element={<Settings />} />
+    </Routes>
   );
 };
 

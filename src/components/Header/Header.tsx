@@ -15,7 +15,7 @@ export const Header = () => {
           ${balance.toLocaleString("en-US", { minimumFractionDigits: 2 })}
         </div>
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-6 relative bg-fuchsia-400 rounded-lg p-2 top-12 shadow-[rgba(2,0,15,0.5)_0px_0px_8px_0px]">
         <MoneyManagement />
       </div>
     </div>

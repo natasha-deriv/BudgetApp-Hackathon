@@ -31,22 +31,22 @@ export const MoneyManagement = () => {
 
   return (
     <div className="flex items-center gap-5 w-full justify-around">
-      <div
-        className="w-fit p-4 rounded-lg border"
-        onClick={onClickSendModalOpen}
-      >
-        <div className="flex items-center gap-2">
-          <LuSend size={20} color="white" />
-          <div className="text-white">Send Money</div>
+      <div className="w-fit p-4 rounded-lg" onClick={onClickSendModalOpen}>
+        <div className="flex items-center gap-2 flex-col">
+          <div className="text-white font-bold text-lg">Income</div>
+          <div className="flex items-center gap-1">
+            <IoAddCircleOutline size={15} color="white" />
+            <div className=" text-white text-xs">Add Income</div>
+          </div>
         </div>
       </div>
-      <div
-        className="w-fit p-4 rounded-lg border"
-        onClick={onClickReceiveModalOpen}
-      >
-        <div className="flex items-center gap-2">
-          <IoAddCircleOutline size={20} color="white" />
-          <div className="text-white">Add Money</div>
+      <div className="w-fit p-4 rounded-lg" onClick={onClickReceiveModalOpen}>
+        <div className="flex items-center gap-2 flex-col">
+          <div className="text-white font-bold text-lg">Expense</div>
+          <div className="flex items-center gap-1">
+            <IoAddCircleOutline size={15} color="white" />
+            <div className="text-white text-xs">Add Expense</div>
+          </div>
         </div>
       </div>
       {/**
