@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export const useBalance = () => {
   const [balance, setBalance] = useState(() => {
     const savedBalance = localStorage.getItem("balance");
-    return savedBalance !== null ? JSON.parse(savedBalance) : 10000000000;
+    return savedBalance !== null ? JSON.parse(savedBalance) : 0;
   });
 
   useEffect(() => {

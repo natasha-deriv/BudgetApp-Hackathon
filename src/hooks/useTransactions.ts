@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 type Transactions = {
   id: number;
+  title: string;
   amount: number;
-  address: string;
+  date: string;
   type: string;
 }[];
 
@@ -18,16 +19,18 @@ export const useTransactions = () => {
   }, [transactions]);
 
   const handleTransactions = (
+    title: string,
     amount: number,
-    address: string,
+    date: string,
     type: string
   ) => {
     setTransactions((prevTransactions: Transactions) => [
       ...prevTransactions,
       {
         id: prevTransactions.length + 1,
+        title,
         amount,
-        address,
+        date,
         type,
       },
     ]);

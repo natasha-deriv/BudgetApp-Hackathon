@@ -1,6 +1,6 @@
 import { IoAddCircleOutline } from "react-icons/io5";
 import { LuSend } from "react-icons/lu";
-import { ReceiveMoneyModal, SendMoneyModal } from "../../modals";
+import { ReceiveMoneyModal, AddIncomeModal } from "../../modals";
 import { useState } from "react";
 
 export const MoneyManagement = () => {
@@ -52,7 +52,7 @@ export const MoneyManagement = () => {
       {/**
        * 1. The modal is used here because the component to trigger it is here.
        */}
-      <SendMoneyModal
+      <AddIncomeModal
         isSendOpen={isSendModalOpen}
         handleClose={onClickCloseSendModal}
       />
