@@ -1,5 +1,4 @@
 import { IoAddCircleOutline } from "react-icons/io5";
-import { LuSend } from "react-icons/lu";
 import { ReceiveMoneyModal, AddIncomeModal } from "../../modals";
 import { useState } from "react";
 
